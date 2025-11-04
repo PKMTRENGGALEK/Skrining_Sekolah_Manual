@@ -25,14 +25,12 @@
         font-family: "Poppins", sans-serif;
         background: linear-gradient(135deg, #e0f7fa, #f8f9fa);
         min-height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding-top: 60px;
       }
 
       .container {
         text-align: center;
-        padding: 40px 20px;
+        padding-bottom: 60px;
       }
 
       .logo {
@@ -50,20 +48,22 @@
 
       h1 {
         font-weight: 600;
-        margin-bottom: 20px;
-        color: #00796b;
+        margin-bottom: 10px;
+        color: #00695c;
       }
 
       p.subtitle {
         color: #555;
-        margin-bottom: 40px;
+        margin-bottom: 50px;
+        font-size: 1rem;
       }
 
+      /* ===== CARD STYLE ===== */
       .card {
         border: none;
         border-radius: 1.5rem;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s ease;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        transition: all 0.35s ease;
         overflow: hidden;
         cursor: pointer;
         background: white;
@@ -76,12 +76,12 @@
 
       .card img {
         width: 100%;
-        height: 220px; /* tinggi lebih ideal untuk gambar animasi */
-        object-fit: contain; /* pastikan seluruh gambar terlihat utuh */
-        background-color: #f9f9f9; /* latar lembut agar kontras dengan gambar transparan */
+        height: 200px;
+        object-fit: contain;
+        background-color: #f9f9f9;
         border-top-left-radius: 1.5rem;
         border-top-right-radius: 1.5rem;
-        padding: 15px; /* beri ruang agar tidak mepet ke tepi */
+        padding: 20px;
         transition: transform 0.4s ease;
       }
 
@@ -96,21 +96,35 @@
       .card-title {
         font-weight: 600;
         color: #004d40;
-        font-size: 1.25rem;
+        font-size: 1.1rem;
       }
 
       .card-text {
-        color: #777;
-        font-size: 0.95rem;
+        color: #666;
+        font-size: 0.93rem;
+        margin-top: 10px;
       }
 
       footer {
-        margin-top: 40px;
-        color: #888;
+        margin-top: 60px;
+        color: #777;
         font-size: 0.9rem;
+        padding: 15px 0;
+        border-top: 1px solid #ddd;
+      }
+
+      /* Responsive Grid */
+      @media (max-width: 768px) {
+        .card img {
+          height: 160px;
+        }
+        h1 {
+          font-size: 1.6rem;
+        }
       }
     </style>
   </head>
+
   <body>
     <div class="container">
       <!-- Logo -->
@@ -130,9 +144,8 @@
         Pilih sekolah untuk melihat hasil skrining kesehatan anak.
       </p>
 
-      <!-- Card Sekolah -->
+      <!-- ====== ROW 1 ====== -->
       <div class="row justify-content-center g-4">
-        <!-- Card 1: MAN 1 -->
         <div class="col-md-3" data-aos="zoom-in">
           <a
             href="https://docs.google.com/spreadsheets/d/13iNASZWpT0df75kz7w_VwV7mxRvvGEW7JK7XEkqy2Ac/edit?usp=sharing"
@@ -147,13 +160,14 @@
               <div class="card-body">
                 <h5 class="card-title">MAN 1 Trenggalek</h5>
                 <p class="card-text">
-                  Klik untuk melihat data skrining kesehatan siswa/Siswi MAN 1
+                  Klik untuk melihat data skrining kesehatan siswa/siswi MAN 1
                   Trenggalek.
                 </p>
               </div>
             </div>
           </a>
         </div>
+
         <div class="col-md-3" data-aos="zoom-in">
           <a
             href="https://docs.google.com/spreadsheets/d/1425E6mWq3KXBr3d11y_eDJ6z1-1ToV45F_TYKUzjKs4/edit?usp=sharing"
@@ -168,7 +182,7 @@
               <div class="card-body">
                 <h5 class="card-title">SMKN 1 Trenggalek</h5>
                 <p class="card-text">
-                  Klik untuk melihat data skrining kesehatan siswa/Siswi SMKN 1
+                  Klik untuk melihat data skrining kesehatan siswa/siswi SMKN 1
                   Trenggalek.
                 </p>
               </div>
@@ -176,9 +190,10 @@
           </a>
         </div>
       </div>
+
+      <!-- ====== ROW 2 ====== -->
       <div class="row justify-content-center g-4 mt-4">
-        <!-- Card 2: Sekolah Lain -->
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="150">
+        <div class="col-md-3" data-aos="zoom-in">
           <a
             href="https://docs.google.com/spreadsheets/d/1Y6Sz3a3Ak0U6Qmuq0el16zuCfUpL9gCZ4y-2NfKNZDw/edit?usp=sharing"
             target="_blank"
@@ -193,13 +208,14 @@
                 <h5 class="card-title">MTS PROGRESIF DARUNNAJAH</h5>
                 <p class="card-text">
                   Klik untuk melihat data skrining kesehatan MTS PROGRESIF
-                  DARUNNAJAH
+                  DARUNNAJAH.
                 </p>
               </div>
             </div>
           </a>
         </div>
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="150">
+
+        <div class="col-md-3" data-aos="zoom-in">
           <a
             href="https://docs.google.com/spreadsheets/d/1qZd79Gdj5f1s_jG_6ceXx1_-RaqMpY5QDNnzXLq5nqU/edit?usp=sharing"
             target="_blank"
@@ -213,13 +229,14 @@
               <div class="card-body">
                 <h5 class="card-title">MTS MUALIMIN</h5>
                 <p class="card-text">
-                  Klik untuk melihat data skrining kesehatan MTS MUALIMIN
+                  Klik untuk melihat data skrining kesehatan MTS MUALIMIN.
                 </p>
               </div>
             </div>
           </a>
         </div>
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="150">
+
+        <div class="col-md-3" data-aos="zoom-in">
           <a
             href="https://docs.google.com/spreadsheets/d/1ecXPuugEQx9F7Jwp62wYyUR0mxsOUnhdkjrRfH7432k/edit?usp=sharing"
             target="_blank"
@@ -233,14 +250,17 @@
               <div class="card-body">
                 <h5 class="card-title">SMPN 5 Trenggalek</h5>
                 <p class="card-text">
-                  Klik untuk melihat data skrining kesehatan SMPN 5 Trenggalek
+                  Klik untuk melihat data skrining kesehatan SMPN 5 Trenggalek.
                 </p>
               </div>
             </div>
           </a>
         </div>
-        <!-- Card 3: Sekolah Lain -->
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="150">
+      </div>
+
+      <!-- ====== ROW 3 ====== -->
+      <div class="row justify-content-center g-4 mt-4">
+        <div class="col-md-3" data-aos="zoom-in">
           <a
             href="https://docs.google.com/spreadsheets/d/1sRMgvYNwjBX3YrcofEkEGl0VL2n2WH4TviLX3-Swqcw/edit?usp=sharing"
             target="_blank"
@@ -254,13 +274,14 @@
               <div class="card-body">
                 <h5 class="card-title">SMPN 6 Trenggalek</h5>
                 <p class="card-text">
-                  Klik untuk melihat data skrining kesehatan SMPN 6 Trenggalek
+                  Klik untuk melihat data skrining kesehatan SMPN 6 Trenggalek.
                 </p>
               </div>
             </div>
           </a>
         </div>
-        <div class="col-md-3" data-aos="zoom-in" data-aos-delay="150">
+
+        <div class="col-md-3" data-aos="zoom-in">
           <a
             href="https://docs.google.com/spreadsheets/d/1VkGs3n0evrrJvQ1Kolb3DLGXEGucLZXOziVBV4-R5DU/edit?usp=sharing"
             target="_blank"
@@ -274,15 +295,12 @@
               <div class="card-body">
                 <h5 class="card-title">MTSN 1 Trenggalek</h5>
                 <p class="card-text">
-                  Klik untuk melihat data skrining kesehatan MTSN 1 Trenggalek
+                  Klik untuk melihat data skrining kesehatan MTSN 1 Trenggalek.
                 </p>
               </div>
             </div>
           </a>
         </div>
-      </div>
-      <div class="row justify-content-center g-4 mt-2">
-        <!-- Card 1: MAN 1 -->
         <div class="col-md-3" data-aos="zoom-in">
           <a
             href="https://docs.google.com/spreadsheets/d/1eFYEMYMouPYv2c5QiKjoAufoOVDRNQ9d6TpZVpcGX64/edit?usp=sharing"
@@ -304,6 +322,8 @@
             </div>
           </a>
         </div>
+      </div>
+      <div class="row justify-content-center g-4 mt-4">
         <div class="col-md-3" data-aos="zoom-in">
           <a
             href="https://docs.google.com/spreadsheets/d/13kyFUu6pRsUSAaDobgsz87LTkkZUthsF2BQiutVd-z8/edit?usp=sharing"
@@ -356,10 +376,7 @@
     <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-      AOS.init({
-        duration: 800,
-        once: true,
-      });
+      AOS.init({ duration: 800, once: true });
     </script>
   </body>
 </html>
